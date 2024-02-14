@@ -1,2 +1,2 @@
 # dogAPI
-I used the flask framework to integrate a dog API
+This application uses the Flask framework in Python to integrate a dog API
