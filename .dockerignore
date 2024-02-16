@@ -1,0 +1,8 @@
+__pycache__
+env
+*.log
+*.swp
+.git
+.cache
+*.md
+*.tmp
