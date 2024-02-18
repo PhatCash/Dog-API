@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <h2>Welcome To A Dog Web App</h2>
+        <p>Discover images of a specific dog breed or find all dog breeds!</p>
+        <a href="{{ url_for('breed_input') }}">Find 10 random Images Of A Specific Dog Breed</a>
+        <a href="{{ url_for('all_breeds') }}">Find All Dog Breeds (excludes sub-breeds)</a>
+    </div>
+{% endblock %}
