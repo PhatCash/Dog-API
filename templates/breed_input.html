@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <form action="{{ url_for('show_breed') }}" method="post">
+            <input type="text" name="breed" placeholder="Please Enter A Dog Breed!"
+            pattern="[a-z]*" title="Breed name should be in lowercase and without spaces" required>
+            <button type="submit">Show Images</button>
+        </form>
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+{% endblock %}
