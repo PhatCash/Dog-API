@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <h2>Images Of {{ breed_name }}</h2>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <div class="images">
+                {% for image in images %}
+                    <img src="{{ image }}" alt="Image of {{ breed_name }}" class="dog-image">
+                {% endfor %}
+            </div>
+        {% endif %}
+        <a href="{{ url_for('breed_input') }}">Find More Images Of A Specific Breed</a>
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+{% endblock %}
