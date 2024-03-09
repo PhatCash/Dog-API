@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <h2>All Dog Breeds</h2>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <div class="images">
+                <ul class="dogs">
+                    {% for breed in breeds %}
+                        <li>{{ breed }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <a href="{{ url_for('breed_input') }}">Find Images For A Specific Dog Breed</a>
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+{% endblock %}
